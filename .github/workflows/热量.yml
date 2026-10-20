@@ -1,0 +1,13 @@
+
+name: Manual Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a manual task
+        run: echo "Workflow triggered manually by ${{ github.actor }}"
